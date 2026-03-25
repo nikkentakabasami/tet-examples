@@ -1,0 +1,23 @@
+
+.test-button-panel {
+	display: flex;
+	gap: 5px;
+	border: 1px solid #ccc;
+	background-color: white;
+	border-radius: 4px;
+	padding: 5px;
+}
+
+
+.test-btn {
+	display: inline-flex;
+	align-items: center;
+	gap: 5px;
+	font-size: 16px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	padding: 4px 8px; /* top_bottom  right_left */
+	cursor: pointer;
+	min-width: 25px;
+	min-height: 30px;
+}

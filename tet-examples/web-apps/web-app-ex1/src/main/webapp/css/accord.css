@@ -1,0 +1,394 @@
+
+
+/* Приличный шрифт по умолчанию. Задаётся на body */
+.acc-default-font {
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+
+/* Стиль плавающих панелей (подсказки, диалоги) */
+.acc-popup {
+	position: absolute;
+	display: none;
+	top: 200px;
+	left: 200px;
+	overflow: auto;
+}
+
+/* Оформление плавающих панелей по умолчанию: рамка, белый фон */
+.acc-popup-default {
+	gap: 5px;
+    padding: 5px;
+	background-color: white;
+	border: 1px solid black;
+	border-radius: 4px;
+}
+
+
+
+/* Панель с описанием  "<pre class="acc-desc-panel">"  */
+.acc-desc-panel {
+	font-size: 14px;
+	padding: 10px;
+	border-radius: 4px;
+	border: 1px solid #ccc;
+	background-color: LightYellow;
+	white-space: pre-wrap;
+	margin: 0px;
+}
+
+/* Панель с описанием программным кодом  "<pre class="acc-code-panel">"  */
+.acc-code-panel {
+	background-color: #f0f0f0;
+	padding: 2px;
+	border-radius: 4px;
+	border: 1px solid #ccc;
+	margin: 0px;
+	white-space: pre-wrap;
+}
+
+.acc-simple-panel {
+	padding: 5px;
+	border: 1px solid LightGray;
+	border-radius: 4px;
+}
+
+/* Панель со списком ссылок  */
+.acc-anchor-list {
+	font-size: 16px;
+	padding: 10px;
+	border-radius: 4px;
+	border: 1px solid #ccc;
+	background-color: WhiteSmoke;
+	margin: 0px;
+}
+
+.acc-anchor-list a {
+	display: block;
+	margin: 5px;
+    text-decoration: none;	
+}
+
+
+
+
+/* Запрет на выделение */
+.no-select {
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+
+
+/*------ WaitPanel - панель ожидания ------*/
+
+
+.loading-indicator {
+	position: absolute;
+	display: none;
+	padding: 12px;
+	background: white;
+	color: black;
+	font-weight: bold;
+	z-index: 999999;
+	border: 1px solid red;
+	-webkit-border-radius: 10px;
+	-webkit-box-shadow: 0px 0px 5px red;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 14px;
+}
+
+.loading-indicator label {
+	padding-left: 20px;
+	background: url('../images/ajax-loader-small.gif') no-repeat center left;
+}
+
+
+/*------ Кнопка с картинкой <img> (и текстом)  ------*/
+
+.acc-btn {
+	display: inline-flex;
+	align-items: center;
+	gap: 5px;
+	font-size: 16px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	padding: 4px 8px; /* top_bottom  right_left */
+	cursor: pointer;
+	min-width: 25px;
+	min-height: 30px;
+}
+
+
+/*------ Иконки на кнопку  ------*/
+
+
+
+.acc-btn-add {
+	background-image: url(../icons/add.png);
+}
+
+.acc-btn-cross {
+	background-image: url(../icons/cross.png);
+}
+
+.acc-btn-check {
+	background-image: url(../icons/check.png);
+}
+
+.acc-btn-arrow-up {
+	background-image: url(../icons/arrow-small-up.png);
+}
+.acc-btn-arrow-down {
+	background-image: url(../icons/arrow-small-down.png);
+}
+
+.acc-btn-eye {
+	background-image: url(../icons/eye.png);
+}
+
+.acc-btn-eye-crossed {
+	background-image: url(../icons/eye-crossed.png);
+}
+
+.acc-btn-rotate-left {
+	background-image: url(../icons/rotate-left.png);
+}
+
+
+.acc-btn-calendar {
+	background-image: url(../icons/calendar.png);
+}
+
+
+.acc-btn-icon-text {
+	background-repeat: no-repeat;
+	background-position: 6px 6px;
+	padding-left: 30px;
+}
+
+
+.acc-btn-icon {
+	background-repeat: no-repeat;
+	background-position: 6px 6px;
+	padding-left: 20px;
+}
+
+
+
+/*------  Вертикальная панель с кнопками acc-btn ------*/
+.acc-vert-button-panel {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	align-items: flex-start;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	padding: 5px;
+}
+
+/*------  Горизонтальная панель с кнопками acc-btn ------*/
+.acc-button-panel {
+	display: flex;
+	gap: 5px;
+	border: 1px solid #ccc;
+	background-color: white;
+	border-radius: 4px;
+	padding: 5px;
+}
+
+
+/*Горизонтальная панель без рамок и промежутков*/
+.acc-button-panel-tight {
+	display: flex;
+}
+
+/* Филлерная панель для заполнения промежутков. Выравнивает содержимое по центру */
+.acc-filler-panel {
+	flex-grow: 1; 
+}
+
+/* Выравнивает содержимое по центру */
+.acc-centered-content {
+	display: flex; 
+	align-items: center; 
+	justify-content: center;
+}
+
+.acc-left-content {
+	display: flex; 
+	align-items: center; 
+	justify-content: left;
+}
+
+
+
+
+
+/*------ AccModalDialog - модальный диалог ------*/
+.acc-dialog {
+	position: absolute;
+	top: 200px;
+	left: 200px;
+	width: 400px;
+	height: 300px;
+	flex-direction: column;
+	background-color: white;
+	border: 1px solid black;
+	border-radius: 4px;
+	display: none;
+}
+
+.acc-dialog-title {
+	font-weight: bold;
+}
+
+.acc-dialog-dtop {
+	flex-basis: 20px;
+	background-color: #b3e6ff;
+	padding: 5px;
+	border-bottom: 1px solid black;
+}
+
+.acc-dialog-dbody {
+	flex-grow: 1;
+	padding: 5px;
+}
+
+.acc-dialog-dbottom {
+	padding: 5px;
+	border-top: 1px solid black;
+	display: flex;
+	justify-content: flex-end;
+	background-color: whitesmoke;
+	gap: 10px;
+}
+
+.acc-dialog-content {
+	height: 100%;
+	width: 100%;
+}
+
+.acc-close-btn {
+	float: right;
+	background-image: url('../icons/cross.png');
+	background-repeat: no-repeat;
+	width: 20px;
+	height: 20px;
+}
+
+.acc-ok span {
+	padding-left: 20px;
+	background-image: url('../icons/check.png');
+	background-repeat: no-repeat;
+}
+
+.acc-cancel span {
+	padding-left: 20px;
+	background-image: url('../icons/cross.png');
+	background-repeat: no-repeat;
+}
+
+
+/*------ AccSplitter ------*/
+
+.acc-splitter-panel {
+    display: flex;
+    width: 100%;
+}
+
+
+.acc-splitter-panel .acc-sp-left {
+    width: 50%;
+}
+
+.acc-splitter-panel .acc-sp-right {
+    flex-grow: 1;
+}
+
+.acc-splitter-panel .acc-sp-resizer {
+    width: 10px;
+    cursor: ew-resize;
+}
+
+
+
+/* select - для показа в инструментальной панели  */
+
+.acc-tool-panel-select-wrapper {
+    position: relative;
+}
+
+
+
+.acc-dropdown-triangle::after {
+    content: "▼";
+    font-size: 1rem;
+    top: 6px;
+    right: 4px;
+    position: absolute;
+}
+
+
+
+.acc-tool-panel-select-wrapper select {
+	appearance: none;
+    height: 30px;
+    min-width: 100px;
+    width: 100%;
+    border-radius: 5px;	
+    padding: 5px;
+}
+
+
+/*  
+acc-4cols - расположение элементов в 4 столбца  
+acc-2cols - в 2 столбца
+Просто быстрый способ организовать сетку.
+*/
+
+.acc-2cols {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 10px;
+  	grid-row-gap: 10px;
+  	padding: 5px;  
+}
+
+.acc-2cols > .acc-row {
+  grid-column: 1 / 3;
+}
+
+
+.acc-4cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;  
+  	padding: 5px;  
+}
+
+/* элемент шириной в 4 столбца */
+.acc-4cols > .acc-row {
+  grid-column: 1 / 5;
+}
+
+
+/*  
+Быстрый способ расположить блоки в столбец-строку с паддингом.
+*/
+
+.acc-flex-column {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	padding: 5px;
+}
+
+.acc-flex-row {
+	display: flex;
+	flex-direction: row;
+	gap: 5px;
+	padding: 5px;
+}

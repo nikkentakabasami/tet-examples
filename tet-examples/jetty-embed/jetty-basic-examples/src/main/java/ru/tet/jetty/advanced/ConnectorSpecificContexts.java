@@ -1,0 +1,51 @@
+package ru.tet.jetty.advanced;
+
+import java.util.List;
+
+import org.eclipse.jetty.server.Server;
+import org.eclipse.jetty.server.ServerConnector;
+import org.eclipse.jetty.server.handler.ContextHandler;
+import org.eclipse.jetty.server.handler.ContextHandlerCollection;
+
+import ru.tet.jetty.HelloHandler;
+
+/**
+ * Свой коннектор для каждого контекста.
+ * 
+ */
+public class ConnectorSpecificContexts {
+	public static void main(String[] args) throws Exception {
+		Server server = new Server();
+
+		ServerConnector connectorA = new ServerConnector(server);
+		connectorA.setPort(8080);
+		connectorA.setName("connA"); // Give the connector a name
+		ServerConnector connectorB = new ServerConnector(server);
+		connectorB.setPort(9090);
+		connectorB.setName("connB"); // Give the connector a name
+
+		server.addConnector(connectorA);
+		server.addConnector(connectorB);
+
+		// Collection of Contexts
+		ContextHandlerCollection contexts = new ContextHandlerCollection();
+		server.setHandler(contexts);
+
+		// Hello Handler (connection A)
+		ContextHandler ctxHelloA = new ContextHandler();
+		ctxHelloA.setContextPath("/");
+		ctxHelloA.setHandler(new HelloHandler("Hello Connection A"));
+		ctxHelloA.setVirtualHosts(List.of("@connA")); // Reference connector name
+		contexts.addHandler(ctxHelloA);
+
+		// Hello Handler (connection B)
+		ContextHandler ctxHelloB = new ContextHandler();
+		ctxHelloB.setContextPath("/");
+		ctxHelloB.setHandler(new HelloHandler("Greetings from Connection B"));
+		ctxHelloB.setVirtualHosts(List.of("@connB")); // Reference connector name
+		contexts.addHandler(ctxHelloB);
+
+		server.start();
+		server.join();
+	}
+}

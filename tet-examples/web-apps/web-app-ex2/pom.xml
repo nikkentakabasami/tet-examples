@@ -1,0 +1,74 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>ru.tetsu.examples</groupId>
+		<artifactId>web-apps</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>web-app-ex2</artifactId>
+	<packaging>war</packaging>
+
+
+	<dependencies>
+
+		<!-- servlet api -->
+		<dependency>
+			<groupId>jakarta.servlet.jsp.jstl</groupId>
+			<artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>jakarta.servlet</groupId>
+			<artifactId>jakarta.servlet-api</artifactId>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.glassfish.web</groupId>
+			<artifactId>jakarta.servlet.jsp.jstl</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>jakarta.servlet.jsp</groupId>
+			<artifactId>jakarta.servlet.jsp-api</artifactId>
+		</dependency>
+
+
+		<dependency>
+			<groupId>jakarta.websocket</groupId>
+			<artifactId>jakarta.websocket-api</artifactId>
+			<version>2.0.0</version>
+			<scope>provided</scope>
+		</dependency>
+
+
+	</dependencies>
+
+
+	<build>
+		<finalName>webapp2</finalName>
+		
+		<plugins>
+
+			<!-- Отлично поднимает приложение! -->
+			<plugin>
+				<groupId>org.eclipse.jetty.ee10</groupId>
+				<artifactId>jetty-ee10-maven-plugin</artifactId>
+				<version>12.0.19</version>
+				<configuration>
+					<modules>ee10-plus,ee10-jsp</modules>
+					<httpConnector>
+						<port>8085</port>
+					</httpConnector>
+					<webApp>
+						<contextPath>/web-app-ex2</contextPath>
+					</webApp>
+				</configuration>
+			</plugin>
+
+
+		</plugins>
+	</build>
+
+</project>

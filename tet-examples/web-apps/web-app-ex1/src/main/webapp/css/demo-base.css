@@ -1,0 +1,171 @@
+/* разнообразные стили для демок  */
+
+
+h3, h4 {
+  white-space: pre-wrap;
+}
+
+
+h3 {
+    margin-block-end: 5px;
+    margin-block-end: 5px;
+}
+
+h4 {
+	margin-block-start: 10px;
+    margin-block-end: 0px;
+	
+}
+
+
+p {
+	margin-block-start: 0px;
+    margin-block-end: 10px;
+}
+
+.full-width {
+    flex-grow: 1;
+}
+
+
+.titlePanel {
+	display: flex;
+	gap: 10px;
+}
+
+.titlePanel h2 {
+	flex: 1;
+	margin: 0px;
+}
+
+.titlePanel a {
+	flex-grow: 0;
+	padding: 4px 2px;
+}
+
+
+#tabbedPanel1 {
+    height: 200px;
+    width: 100%;
+}
+
+.basePanel {
+    position: absolute;
+    top: 9px;
+    left: 9px;
+    right: 9px;
+    bottom: 9px;
+    display: flex;
+    
+    flex-direction: column;
+    gap: 5px;
+}
+
+.workPanel {
+    flex-grow: 1;
+	border: 1px solid LightGray;
+	border-radius: 4px;
+}
+
+.workPanel .p1 {
+    flex-grow: 1;
+	border: 1px solid LightGray;
+	border-radius: 4px;
+}
+.workPanel .p2 {
+    flex-basis: 300px;
+}
+
+.auxPanel {
+    height: 200px;
+    display: flex;
+}
+
+.logPanel {
+	overflow: scroll;
+}
+
+
+
+.fullSize {
+	width: 100%;
+	height: 100%;
+}
+
+
+.help-panel {
+	background-color: whitesmoke;
+}
+
+
+.gray-border {
+	border: 2px solid LightGray;
+	border-radius: 4px;
+}
+
+.red-border {
+	border: 2px solid red!important;
+}
+
+.blue-border {
+	border: 2px solid blue;
+}
+
+.green-border {
+	border: 2px solid green;
+}
+
+.bg-red {
+	background-color: red!important;
+}
+
+.bg-smoke {
+	background-color: WhiteSmoke;
+}
+
+.bg-blue {
+	background-color: AliceBlue;
+}
+.bg-gold {
+	background-color: Gold;
+}
+
+.bg-green {
+	background-color: lightGreen;
+}
+
+
+.red {
+	color: red;
+}
+.gray {
+	color: Gray;
+}
+
+.green {
+	color: green;
+}
+
+#log1 {
+  white-space: pre-wrap;
+}
+
+#log2, #log3 {
+  white-space: pre;
+}
+
+
+/* оформление контейнера и вложенных элементов */
+.wrapper {
+	border: 2px solid #f76707;
+	border-radius: 5px;
+	background-color: #fff4e6;
+}
+
+.wrapper>div {
+	border: 2px solid gray;
+	border-radius: 5px;
+	background-color: lightGray;
+	padding: 5px;
+}
+
