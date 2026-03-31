@@ -36,7 +36,13 @@ public class MainTetJettyServer2 {
 		options.setWebAppProjectFinalName("webapp2");
 		
 		//подключаем дополнительные статические ресурсы
-//		options.getFileSystemBaseResources().add(Path.of("../../web-apps/web-static-roots/src/webapps/alt-root/"));
+		options.addAdditionalStatic("/static1/*", Path.of("../../web-apps/web-static-roots/src/main/resources/static-root1/"));
+
+		//по умолчанию будет подключён по пути: /static-root2/*
+		options.addAdditionalStatic(Path.of("../../web-apps/web-static-roots/src/main/resources/static-root2/"));
+		
+		
+//		options.getFileSystemBaseResources().add(Path.of("../../web-apps/web-static-roots/src/main/resources/static-root2/"));
 		
 		//подключаем дополнительные классы
 //		options.getExtraClasspathes().add(Path.of("../../tet-aux/target/classes/"));

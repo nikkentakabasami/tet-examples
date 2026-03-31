@@ -43,6 +43,12 @@
 		</dependency>
 
 
+		<!-- jetty -->
+		<dependency>
+			<groupId>ru.tetsu.examples</groupId>
+			<artifactId>jetty-utils</artifactId>
+		</dependency>
+
 	</dependencies>
 
 

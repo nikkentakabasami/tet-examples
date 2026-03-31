@@ -1,21 +1,77 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>ru.tetsu.examples</groupId>
-    <artifactId>tet-examples</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-  </parent>
-  <artifactId>web-apps</artifactId>
-  <packaging>pom</packaging>
-  
-  <modules>
-  	<module>web-app-ex1</module>
-  	<module>web-app-ex10-overlay</module>
-  	<module>web-app-ex11-overlay2</module>
-  	<module>web-jslibs</module>
-  	<module>web-app-ex2</module>
-  	<module>web-static-roots</module>
-  </modules>
-  
-  
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>ru.tetsu.examples</groupId>
+		<artifactId>tet-examples</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>web-apps</artifactId>
+	<packaging>pom</packaging>
+
+	<modules>
+		<module>web-app-ex1</module>
+		<module>web-app-ex10-overlay</module>
+		<module>web-app-ex11-overlay2</module>
+		<module>web-jslibs</module>
+		<module>web-app-ex2</module>
+		<module>web-static-roots</module>
+	</modules>
+
+
+	<!-- 
+		делаем все jetty библиотеки provided, чтобы они не попадали в конечную сборку.
+		они нужны только для запуска в режиме отладки.
+	  -->
+	<dependencyManagement>
+		<dependencies>
+
+			<dependency>
+				<groupId>ru.tetsu.examples</groupId>
+				<artifactId>jetty-utils</artifactId>
+				<version>${project.version}</version>
+				<scope>provided</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.eclipse.jetty</groupId>
+				<artifactId>jetty-server</artifactId>
+				<scope>provided</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.eclipse.jetty.ee10</groupId>
+				<artifactId>jetty-ee10-servlet</artifactId>
+				<scope>provided</scope>
+			</dependency>
+
+
+			<dependency>
+				<groupId>org.eclipse.jetty.ee10</groupId>
+				<artifactId>jetty-ee10-webapp</artifactId>
+				<scope>provided</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.eclipse.jetty</groupId>
+				<artifactId>jetty-slf4j-impl</artifactId>
+				<scope>provided</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.eclipse.jetty.ee10</groupId>
+				<artifactId>jetty-ee10-annotations</artifactId>
+				<scope>provided</scope>
+			</dependency>
+
+
+
+		</dependencies>
+
+	</dependencyManagement>
+	<!-- 
+-->
+
+
 </project>

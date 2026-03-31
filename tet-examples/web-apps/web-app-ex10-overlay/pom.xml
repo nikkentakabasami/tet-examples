@@ -47,10 +47,25 @@
 		</dependency>
 
 
+		<!-- jetty -->
+		<dependency>
+			<groupId>ru.tetsu.examples</groupId>
+			<artifactId>jetty-utils</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>ru.tetsu.examples</groupId>
+			<artifactId>web-app-ex1</artifactId>
+			<version>${project.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+
 	</dependencies>
 
 
 	<build>
+		<finalName>webapp10</finalName>
 		<plugins>
 
 			<plugin>
@@ -63,7 +78,7 @@
 						<port>8080</port>
 					</httpConnector>
 					<webApp>
-						<contextPath>/web-app-ex2</contextPath>
+						<contextPath>/web-app-ex10</contextPath>
 					</webApp>
 
 				</configuration>

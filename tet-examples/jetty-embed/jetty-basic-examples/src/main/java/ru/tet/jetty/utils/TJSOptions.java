@@ -1,16 +1,14 @@
-package ru.tet.jetty.starter;
+package ru.tet.jetty.utils;
 
 import java.nio.file.Path;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
-public class TetJettyServerOptions {
+public class TJSOptions {
 
 	@AllArgsConstructor
 	public static class AdditionalStatic {

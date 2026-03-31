@@ -1,0 +1,15 @@
+
+
+embedded starters for all web apps
+jetty 9 starter
+
+//		webAppContext.setConfigurations(new Configuration[] {
+//	    new WebInfConfiguration(),
+//	    new EnvConfiguration(),    // Handles jetty-env.xml and JNDI
+//	    new WebXmlConfiguration(), // Handles web.xml
+//	});		
+
+
+jetty-slf4j
+logging
+

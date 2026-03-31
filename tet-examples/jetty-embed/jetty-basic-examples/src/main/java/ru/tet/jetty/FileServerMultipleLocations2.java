@@ -8,6 +8,7 @@ import org.eclipse.jetty.ee10.servlet.DefaultServlet;
 import org.eclipse.jetty.ee10.servlet.ResourceServlet;
 import org.eclipse.jetty.ee10.servlet.ServletContextHandler;
 import org.eclipse.jetty.ee10.servlet.ServletHolder;
+import org.eclipse.jetty.ee10.webapp.WebAppContext;
 import org.eclipse.jetty.server.Handler;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.handler.DefaultHandler;
@@ -23,7 +24,7 @@ import org.eclipse.jetty.util.resource.Resources;
  * ResourceServlet - позволяет подключить дополнительно статические ресурсы из доп. локаций.
  *
  */
-public class FileServerMultipleLocations {
+public class FileServerMultipleLocations2 {
 	public static void main(String[] args) throws Exception {
 		
 		
@@ -31,7 +32,7 @@ public class FileServerMultipleLocations {
 		
 		Server server = new Server(8081);
 
-		ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
+		WebAppContext context = new WebAppContext();
 		context.setContextPath("/");
 		
 		//статические ресурсы из класспаза
@@ -58,8 +59,8 @@ public class FileServerMultipleLocations {
 
 		
 		//Для обслуживания статического контента из context.baseResource
-		ServletHolder holderDef = new ServletHolder("default", DefaultServlet.class);
-		context.addServlet(holderDef, "/");
+//		ServletHolder holderDef = new ServletHolder("default", DefaultServlet.class);
+//		context.addServlet(holderDef, "/");
 		
 		
 		//добавляем defaultHandler - чтобы генерировать страницу с контекстами при заходе в корень сервера

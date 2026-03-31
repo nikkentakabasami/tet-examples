@@ -9,6 +9,9 @@ import org.eclipse.jetty.server.Response;
 import org.eclipse.jetty.util.BufferUtil;
 import org.eclipse.jetty.util.Callback;
 
+/**
+ * Тестовый Handler, возвращающий заданную строку.
+ */
 public class HelloHandler extends Handler.Abstract {
 	private final String msg;
 

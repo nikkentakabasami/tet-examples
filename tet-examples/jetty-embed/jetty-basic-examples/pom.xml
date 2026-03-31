@@ -12,7 +12,7 @@
 
 	<dependencies>
 
-		<!-- вспомогательне классы: простые Handler-ы -->
+		<!-- вспомогательные классы: простые Handler-ы -->
 		<dependency>
 			<groupId>ru.tetsu.examples</groupId>
 			<artifactId>jetty-utils</artifactId>
@@ -60,6 +60,11 @@
 		<dependency>
 			<groupId>org.eclipse.jetty.compression</groupId>
 			<artifactId>jetty-compression-server</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
 		</dependency>
 
 

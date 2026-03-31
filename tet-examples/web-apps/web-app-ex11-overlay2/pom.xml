@@ -41,6 +41,11 @@
 			<artifactId>jakarta.servlet.jsp-api</artifactId>
 		</dependency>
 
+		<!-- jetty -->
+		<dependency>
+			<groupId>ru.tetsu.examples</groupId>
+			<artifactId>jetty-utils</artifactId>
+		</dependency>
 
 
 	</dependencies>
@@ -54,6 +59,7 @@
 
 
 	<build>
+		<finalName>webapp11</finalName>
 		<plugins>
 
 			<plugin>

@@ -11,7 +11,7 @@
         <!-- Include configuration files from src/main/config into a 'config' folder in the zip -->
         <fileSet>
             <directory>${project.basedir}/src/main/resources/jslibs</directory>
-            <outputDirectory>/</outputDirectory>
+            <outputDirectory>/jslibs</outputDirectory>
         </fileSet>
         
         

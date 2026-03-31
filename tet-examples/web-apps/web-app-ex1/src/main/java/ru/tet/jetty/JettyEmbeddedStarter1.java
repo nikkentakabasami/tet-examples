@@ -1,10 +1,6 @@
-package ru.tet.jetty.webstarter;
-
-import java.nio.file.Path;
+package ru.tet.jetty;
 
 import javax.naming.NamingException;
-
-import org.slf4j.bridge.SLF4JBridgeHandler;
 
 import ru.tet.beans.UserDTO;
 import ru.tet.jetty.starter.TetJettyServer;
@@ -12,36 +8,28 @@ import ru.tet.jetty.starter.TetJettyServerOptions;
 
 
 /**
- * Запуск через jetty embedded проекта web-app-ex1.
- * С использованием класса TetJettyServer.
- * 
- * Всё работает, но проблемы с jndi: classloader UserDTO не тот.
- * 
+ * Запуск через jetty embedded (С использованием класса TetJettyServer)
  * 
  */
-public class MainTetJettyServer1 {
+public class JettyEmbeddedStarter1 {
 
-	static {
-		// Setup java.util.logging to slf4j bridge
-		SLF4JBridgeHandler.install();
-	}
-	
 	
 	public static void main(String[] args) throws Exception {
 		
 		TetJettyServerOptions options = new TetJettyServerOptions();
 		options.setPort(8081);
-		options.setContextPath("/");
+//		options.setContextPath("/");
+		options.setContextPath("/webapp1");
 
 		//подключаем веб-приложение
-		options.setWebAppProjectPath("../../web-apps/web-app-ex1");
-		options.setWebAppProjectFinalName("webapp1");
+//		options.setWebAppProjectPath("../../web-apps/web-app-ex1");
+//		options.setWebAppProjectFinalName("webapp1");
 		
 		//подключаем дополнительные статические ресурсы
 //		options.getFileSystemBaseResources().add(Path.of("../../web-apps/web-static-roots/src/webapps/alt-root/"));
 		
 		//подключаем дополнительные классы
-		options.getExtraClasspathes().add(Path.of("../../tet-aux/target/classes/"));
+//		options.getExtraClasspathes().add(Path.of("../../tet-aux/target/classes/"));
 		
 		TetJettyServer main = new TetJettyServer();
 		

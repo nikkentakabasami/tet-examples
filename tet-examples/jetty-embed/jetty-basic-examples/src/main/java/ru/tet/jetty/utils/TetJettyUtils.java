@@ -19,27 +19,27 @@ import org.eclipse.jetty.util.resource.Resources;
 
 import jakarta.servlet.ServletContext;
 
+/**
+ * Практической ценности эти утилиты не имеют.
+ * Проще использовать WebAppContext.
+ * 
+ */
 public class TetJettyUtils {
 
 	
 	/**
 	 * Добавляет поддержку аннотаций
-	 * сканировать сервлетные аннотации вроде @WebServlet
+	 * сканировать сервлетные аннотации вроде @WebServlet для ServletContextHandler
 	 * @param context
 	 */
 	public static void addAnnotationSupport(ContextHandler context) {
-		
 		context.setAttribute("org.eclipse.jetty.server.webapp.ContainerIncludeJarPattern", ".*/jakarta.servlet-api-[^/]*\\.jar$|.*/classes/.*$");
-		
 	}
 	
-	
 	/**
-	 * Setup JSP Support for ServletContextHandlers.
-	 * <p>
-	 * NOTE: This is not required or appropriate if using a WebAppContext.
-	 * </p>
-	 */	
+	 * Добавляет JSP Support для ServletContextHandler
+	 * @param context
+	 */
 	public static void enableEmbeddedJspSupport(
 			ServletContextHandler servletContextHandler,
 			boolean usingPrecompiledJsps
