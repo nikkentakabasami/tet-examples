@@ -7,7 +7,7 @@ import org.eclipse.jetty.server.ServerConnector;
 import org.eclipse.jetty.server.handler.ContextHandler;
 import org.eclipse.jetty.server.handler.ContextHandlerCollection;
 
-import ru.tet.jetty.HelloHandler;
+import ru.tet.jetty.handlers.HelloHandler;
 
 /**
  * Свой коннектор для каждого контекста.

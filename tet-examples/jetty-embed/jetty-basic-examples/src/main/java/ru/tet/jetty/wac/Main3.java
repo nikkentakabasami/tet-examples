@@ -12,7 +12,6 @@ import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.ServerConnector;
 import org.eclipse.jetty.server.handler.DefaultHandler;
 import org.eclipse.jetty.util.resource.Resource;
-import org.slf4j.bridge.SLF4JBridgeHandler;
 
 /**
  * Запуск веб. приложения web-app-ex2.
@@ -20,10 +19,6 @@ import org.slf4j.bridge.SLF4JBridgeHandler;
  * 
  */
 public class Main3 {
-	static {
-		// Setup java.util.logging to slf4j bridge
-		SLF4JBridgeHandler.install();
-	}
 
 	public static void main(String[] args) throws Exception {
 

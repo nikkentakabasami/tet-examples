@@ -7,7 +7,7 @@
 		<artifactId>jetty-embed</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>jetty-basic-examples</artifactId>
+	<artifactId>jetty-logging-log4j</artifactId>
 
 
 	<dependencies>
@@ -19,42 +19,31 @@
 			<version>${project.version}</version>
 		</dependency>
 
-		<!-- тестовый статический контент -->
 		<dependency>
-			<groupId>ru.tetsu.examples</groupId>
-			<artifactId>web-static-roots</artifactId>
-			<version>${project.version}</version>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
 		</dependency>
-
 
 		<dependency>
 			<groupId>org.eclipse.jetty</groupId>
 			<artifactId>jetty-server</artifactId>
 		</dependency>
 
-		<!-- поддержка сервлетов -->
 		<dependency>
 			<groupId>org.eclipse.jetty.ee10</groupId>
 			<artifactId>jetty-ee10-servlet</artifactId>
 		</dependency>
 
-
-		<!-- WebAppContext -->
 		<dependency>
 			<groupId>org.eclipse.jetty.ee10</groupId>
 			<artifactId>jetty-ee10-webapp</artifactId>
 		</dependency>
 
-
-		<!--   
-		Jetty implementation of the SLF4J APIs
-  		provides a number of easy-to-use features to configure logging.
-  		provides an appender that writes to System.err
 		<dependency>
-			<groupId>org.eclipse.jetty</groupId>
-			<artifactId>jetty-slf4j-impl</artifactId>
+			<groupId>org.eclipse.jetty.toolchain</groupId>
+			<artifactId>jetty-test-helper</artifactId>
 		</dependency>
-  		 -->
+
 
 		<dependency>
 			<groupId>org.slf4j</groupId>
@@ -65,22 +54,6 @@
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-slf4j2-impl</artifactId>
 			<version>${log4j2.version}</version>
-		</dependency>
-
-		<!-- для поддержки HTTP compression -->
-		<dependency>
-			<groupId>org.eclipse.jetty.compression</groupId>
-			<artifactId>jetty-compression-gzip</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.eclipse.jetty.compression</groupId>
-			<artifactId>jetty-compression-server</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
 		</dependency>
 
 

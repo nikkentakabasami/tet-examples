@@ -5,6 +5,10 @@
 run as -> maven build
 jetty:run
 
+либо через
+
+JettyEmbeddedStarter1
+
 ------------------------------
 
 Содержит:

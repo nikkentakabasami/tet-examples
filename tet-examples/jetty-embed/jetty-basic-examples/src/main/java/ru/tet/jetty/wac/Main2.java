@@ -1,9 +1,5 @@
 package ru.tet.jetty.wac;
 
-import java.nio.file.Path;
-import java.nio.file.Paths;
-
-import org.eclipse.jetty.ee10.servlet.ServletHolder;
 import org.eclipse.jetty.ee10.webapp.WebAppContext;
 import org.eclipse.jetty.server.Handler;
 import org.eclipse.jetty.server.Server;
@@ -11,7 +7,6 @@ import org.eclipse.jetty.server.ServerConnector;
 import org.eclipse.jetty.server.handler.DefaultHandler;
 import org.eclipse.jetty.util.resource.Resource;
 import org.eclipse.jetty.util.resource.ResourceFactory;
-import org.slf4j.bridge.SLF4JBridgeHandler;
 
 import ru.tet.jetty.utils.TetJettyUtils;
 
@@ -22,10 +17,6 @@ import ru.tet.jetty.utils.TetJettyUtils;
  * 
  */
 public class Main2 {
-	static {
-		// Setup java.util.logging to slf4j bridge
-		SLF4JBridgeHandler.install();
-	}
 
 	public static void main(String[] args) throws Exception {
 

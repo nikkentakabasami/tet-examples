@@ -13,7 +13,7 @@ import org.eclipse.jetty.util.resource.ResourceFactory;
 import org.eclipse.jetty.util.resource.Resources;
 import org.eclipse.jetty.util.ssl.SslContextFactory;
 
-import ru.tet.jetty.HelloHandler;
+import ru.tet.jetty.handlers.HelloHandler;
 
 /**
  * Demonstrates how to enable the JVM handling of Client Certificates.
